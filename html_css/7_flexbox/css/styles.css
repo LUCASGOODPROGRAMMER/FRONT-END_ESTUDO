@@ -1,0 +1,138 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    padding-bottom:200px;
+}
+/*flex*/
+.flex {
+    display: flex;
+    background-color: rgb(152, 157, 155);
+    margin-bottom: 200px;
+}
+/*flex column*/
+.column {
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: column;
+    margin-bottom: 20px;
+}/*flex direction força os elementos a se comportar como elemento de bloco*/
+
+/*wrap*/
+.wrap{
+    display: flex;
+    flex-wrap: wrap; /*usando flex-wrap eu permito que ele quebre caso o tamanho da widht definida em .box exceda;*/
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 40px;
+    width: 30%;
+    margin:20px auto;
+    border: 1px solid black;
+} /* o display flex não respeita os tamanhos de width, pq ele tenta colocar tudo em um linha só*/
+
+/*justify-content*/
+.justify{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center; /*space-(between, evenly, around)*/
+}
+.items{
+    width: 30%;
+    height: 70px;
+    border: 3px solid black;
+    background-image: linear-gradient(to top,rgba(255, 221, 0, 0.8), rgba(98, 233, 237, 0.8));
+    border-radius: 10px 10px 0px 0px;
+}
+
+.item-especial{
+    margin: 0px 50px;
+    background-image: linear-gradient(to top, rgba(98, 233, 237, 0.8), rgba(83, 218, 37, 0.8));
+}
+
+.item-king{
+    margin: 0px 200px;
+    width: 10%;
+    background-image: linear-gradient(to top, rgba(83, 218, 37, 0.8), rgba(66, 255, 0, 0.8));
+}
+
+.item-plebeu{
+    background-image: linear-gradient(to top, rgba(186, 10, 10, 0.8), rgba(255, 221, 0, 0.8));
+}
+
+.order{
+    display: flex;
+}
+
+#box-1{
+    order: 1; /*usado para organizar a ordem dos elementos*/
+}
+#box-2{
+    order: 2;
+}
+#box-3{
+    order: 3;
+}
+
+/*grow*/
+.grow{
+    display: flex;
+}
+
+.grow .box{
+    flex: 1;
+}
+
+.grow .big{
+    flex:3;
+}
+
+/*basis*/
+
+.basis{
+    display: flex;
+}
+.basis .box{
+    flex-basis: 50px /*todos elementos vai ter largura padrão de 50px*/
+}
+.basis .big {
+    flex-grow: 1; /*class big vai ocupar todo espaço restante*/
+}
+
+/*shrink o elemento vai encolher para preseervar o tamanho dos outros*/
+
+.shrink{
+    display: flex;
+}
+
+.shrink .box{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis:250px;
+    width: auto;
+}
+
+.shrink .small{
+    flex-shrink: 2;
+}
+
+.shorthand{
+    display: flex;
+}
+.shorthand .box{
+    flex: 1 1 250px; /*grow shrink basis, proporção de aumento, proporção de diminuição, tamanho minimo a ser mantido pelos elementos*/
+    width: auto;
+}
+.shorthand .different{
+    flex:2 1 250px; /*ele vai diminuir na proporção de 1 com limite de 250px, e vai aumentar na proporção de 2*/
+}
+
+.self{
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid black;
+}
+
+.self .start{
+   align-self: start;
+}

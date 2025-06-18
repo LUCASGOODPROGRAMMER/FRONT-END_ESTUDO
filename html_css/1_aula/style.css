@@ -1,0 +1,119 @@
+/* padding com width */
+.without-border-box {
+    background-color: black;
+    color: white;
+    width: 100px;
+    padding: 20px;
+}
+
+.border-box {
+    background-color: black;
+    color: white;
+    width: 100px;
+    padding: 20px;
+    box-sizing: border-box; /*evita que padding aumenta o tamanho da caixa*/
+}
+
+/*bordas*/
+
+.border-bottom {
+    border-bottom: 2px solid black;
+    padding: 10px;
+    
+}
+
+/*static*/
+.static {
+    position: static;
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+}
+
+/*relative*/
+.relative{
+    position: relative;
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    left: 35px
+}
+
+/*absolute*/
+.absolute{
+    position: absolute;
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+}
+
+/* absolute e relative*/
+.relative-container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid purple;
+    margin-top: 120px;
+    position: relative;
+}
+
+.absolute-1 , .absolute-2 {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    position: absolute;
+}
+
+.absolute-1 {
+   right: 0;
+}
+
+/*fixed*/
+.fixed {
+    width: 300px;
+    height: 100px;
+    background-color: black;
+    border: 1px solid rgb(23, 0, 128);
+    position: fixed;
+    color: bisque;
+    top: 0px;
+    right: 0px;
+}
+
+/* sticky */
+.sticky {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid rgb(128, 0, 0);
+    color: white;
+    position: sticky;
+    bottom: 0;
+}
+
+/* z-index */
+.absolute-3, .absolute-4, .absolute-5{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(2, 137, 255);
+    position: absolute;
+    
+}
+
+.absolute-3 {
+    left: 25px;
+    z-index: 2;
+}
+
+.absolute-4 {
+    left: 50px;
+    background-color: blue;
+    z-index: 1;
+}
+
+.absolute-5 {
+    left: 75px;
+    background-color: red ;
+    z-index: 0;
+}
+

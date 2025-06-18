@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h2>Fromulários HTML</h2>
+    <!-- primeiro formulário-->
+    <!-- atributos formulários -->
+    <form action="" method="GET">
+      <!-- méthod GET E POST receber e enviar-->
+      <div>
+        <label>nome:</label>
+        <input type="text" name="user" />
+      </div>
+      <!-- atributo name, usado para referenciar o tipo de dado-->
+      <div>
+        <label for="age">idade:</label>
+        <!-- atributo for, usado para deixar o código semântico, o for se refere ao name do input-->
+        <input type="text" name="age" />
+      </div>
+      <!-- select-->
+      <div>
+        <label for="job">Selecione sua preferencia</label>
+        <select name="job">
+          <option value="op-0"></option>
+          <option value="op-1">MORENA</option>
+          <option value="op-2">RUIVA</option>
+          <option value="op-3">VIVA</option>
+        </select>
+      </div>
+      <!-- atributos selected-->
+      <div>
+        <label for="contract">ASSINE OS TERMOS</label>
+        <select name="contract">
+          <option value="sim" selected>SIM</option>
+          <option value="não">NÃO</option>
+        </select>
+      </div>
+      <!-- multiplas opções-->
+      <div>
+        <label for="items">CARDÁPIO</label>
+        <select name="items" multiple>
+          <!-- multiplas seleções-->
+          <option value="arm-1">AK-47</option>
+          <option value="arm-2">MP-45</option>
+          <option value="arm-3">AR-97</option>
+          <option value="arm-4">CANO-CERRADO</option>
+        </select>
+      </div>
+      <div>
+        <!-- textarea -->
+        <label for="textarea">FEEDBACK</label>
+        <textarea name="comment"></textarea>
+      </div>
+      <!-- fieldset e legend-->
+      <div>
+        <fieldset>
+          <legend>Preencha suas informações</legend>
+          <label for="firstname">Nome</label>
+          <input type="text" name="firstname" />
+          <label for="lastname">Sobrenome</label>
+          <input type="text" name="lastname" />
+        </fieldset>
+      </div>
+      <!-- datalist-->
+      <div>
+        <label for="gun">Escolha sua arma</label>
+        <input type="text" name="gun" list="guns" />
+        <datalist id="guns">
+          <option value="MACHINE-GUN"></option>
+          <option value="MINIGUN"></option>
+          <option value="KATANA"></option>
+        </datalist>
+      </div>
+      <!-- input para senhas -->
+      <div>
+        <label for="password">SENHA:</label>
+        <input type="password" name="password" />
+      </div>
+      <!-- radio button-->
+       <div>
+         <label for="girl_model">Escolha o modelo</label>
+        <div class="radio">
+            <input type="radio" value="humana" name="girl_model">
+            <label for="humana">humana</label>
+        </div>
+         <div class="radio">
+            <input type="radio" value="android" name="girl_model">
+            <label for="android">android</label>
+        </div>
+         <div class="radio">
+            <input type="radio" value="momy-issues" name="girl_model">
+            <label for="momy-issues">Mãe solteira</label>
+        </div>
+       </div>
+       <!-- input checkbox-->
+        <div>
+            <label for="caracteristicas">PREFERENCIAS</label>
+            <div class="radio">
+                <input type="checkbox" name="caracteristicas[]" value="big_bubs">
+                <label for="big_bubs">1</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="caracteristicas[]" value="big_ass">
+                <label for="big_ass">2</label>
+            </div>
+        </div>
+        <!-- input de datas-->
+         <div>
+            <label for="day-dead">data da morte</label>
+            <input type="date">
+         </div>
+         <!-- arquivos -->
+          <div>
+            <label for="img">Insira</label>
+            <input type="file" name="img">
+          </div>
+          <!-- input para numbers-->
+           <div>
+            <label for="number">numeros</label>
+            <input type="number" name="number" list="numeros">
+            <datalist id="numeros">
+                <option value="69"></option>
+                 <option value="7"></option>
+                  <option value="244"></option>
+            </datalist>
+           </div>
+
+           <!-- emails -->
+            <div>
+                <label for="email">email profissional:</label>
+                <input type="email" name="email" required>
+            </div>
+            <!-- value -->
+             <div>
+                <label for="values">digite</label>
+                <input type="text" value="o meu valor é esse">
+             </div>
+             <!-- bloqueando input -->
+              <div>
+                <p>tente mudar o valor</p>
+                <input type="text" value="não preencha" disabled>
+              </div>
+              <!-- placeholder-->
+               <div>
+                <label for="placeholder">F</label>
+                <input type="text" name="placeholder" placeholder="digite">
+               </div>
+      <!-- resetar form-->
+      <input type="reset" value="clean" />
+      <!-- envio de form -->
+      <input type="submit" name="POST" value="clique em mim" />
+    </form>
+  </body>
+</html>

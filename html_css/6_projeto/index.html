@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE</title>
+    <!--icones-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--estilos-->
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+  // Espera o DOM estar pronto
+  document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona o elemento <li>
+    const botao = document.querySelector(".plan-btn.recommended");
+
+    // Adiciona um ouvinte de clique
+    botao.addEventListener("click", function() {
+      alert("cartão clonado com sucesso");
+    });
+  });
+</script>
+
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="tema-light"></div>
+        <ul>
+          <li class="list"><a href="">HOME</a></li>
+          <li class="list"><a href="">SERVIÇOS</a></li>
+          <li class="list"><a href="">SUPORTE</a></li>
+          <li class="list" id="button"><a href="">logar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+          <div class="banner">
+            <div class="description">
+              <h1>MANGAKÁ</h1>
+              <p>OS MELHORES MANGÁS EM UM SÓ LUGAR</p>
+            </div>
+          </div>
+
+      <section class="services">
+        <ul>
+          <li>
+            <i class="fas fa-1"></i>
+            <h3>MELHOR DETETIVE</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatem hic deserunt accusamus! Id, officia. Aliquid vitae ad
+              totam non sit. Dolorem reprehenderit nulla alias minima, ea hic
+              ab? Molestias, illum.
+            </p>
+          </li>
+          <li>
+            <i class="fas fa-heart-broken"></i>
+            <h3>FRIO</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatem hic deserunt accusamus! Id, officia. Aliquid vitae ad
+              totam non sit. Dolorem reprehenderit nulla alias minima, ea hic
+              ab? Molestias, illum.
+            </p>
+          </li>
+          
+          <li>
+            <i class="fas fa-face-dizzy"></i>
+            <h3>DE PARAR O CORAÇÃO</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatem hic deserunt accusamus! Id, officia. Aliquid vitae ad
+              totam non sit. Dolorem reprehenderit nulla alias minima, ea hic
+              ab? Molestias, illum.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="pricing-container">
+        <h2>ASSINATURAS</h2>
+        <p>ÓTIMOS PLANOS PARA LER QUANDO QUISER E ONDE QUISER</p>
+        <div class="plans-container">
+            <div class="plan">
+                <ul>
+                    <li class="price">R$30/MÊS</li>
+                    <li class="plan-name">COMUM</li>
+                    <li>500 CAPITULOS MENSAL</li>
+                    <li>20 LIVROS ANUAL</li>
+                    <li>ACESSO AO PDF</li>
+                    <li>TRADUÇÃO EM PT-BR</li>
+                    <li>TRANSCRIÇÃO</li>
+                    <li class="plan-btn">ASSINAR</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <ul>
+                    <li class="price">R$50/MÊS</li>
+                    <li class="plan-name">COMUM</li>
+                    <li>500 CAPITULOS MENSAL</li>
+                    <li>20 LIVROS ANUAL</li>
+                    <li>ACESSO AO PDF</li>
+                    <li>TRADUÇÃO EM PT-BR</li>
+                    <li>TRANSCRIÇÃO</li>
+                    <li class="plan-btn">ASSINAR</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <ul>
+                    <li class="price recommended">R$100/MÊS</li>
+                    <li class="plan-name">COMUM</li>
+                    <li>500 CAPITULOS MENSAL</li>
+                    <li>20 LIVROS ANUAL</li>
+                    <li>ACESSO AO PDF</li>
+                    <li>TRADUÇÃO EM PT-BR</li>
+                    <li>TRANSCRIÇÃO</li>
+                    <li class="plan-btn recommended">ASSINAR</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
