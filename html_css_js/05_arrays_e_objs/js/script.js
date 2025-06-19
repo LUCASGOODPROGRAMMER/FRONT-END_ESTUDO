@@ -1,4 +1,4 @@
-// arrays 
+// arrays
 /*
 const lista = [1, 2, 3, 4, 5]; //lista com dados numéricos, lista do tipo object
 console.log(lista);
@@ -100,7 +100,7 @@ delete a.age
 
 console.log(b)
 console.log(a)
-*/
+
 
 // Loops em arrays
 const usuarios = ['lucas', 'keynner', 'einstein', 'kaylla', 'tainá']
@@ -202,3 +202,62 @@ console.log(normal)
 const inverso = normal.reverse()
 console.log(`array inverso ${inverso}`)
 console.log(`array normal afetado pela ref${normal}`) // ele foi invertido pq foi afetado pela referencia
+
+// métodos string 
+// string tambem é um objeto, tem métodos e propriedades
+
+// método string trim
+// remove os espaço no inicio e no fim da string
+// sanitização de dados
+// método não modifica texto original
+const maskarado = '   lucas'
+
+console.log(`objeto sujo:${maskarado}\nobjeto limpo:${maskarado.trim()}`)
+console.log(maskarado.trim().length)
+
+// métodos de string: padStart e padEnd(inicio de bloco e fim de bloco)
+const inicio = 'HOMEM ESTAVA SÓBRIO'
+console.log(inicio)
+console.log(inicio.padStart([inicio.length + 2], 'O '))
+console.log(inicio.padEnd([inicio.length + 2], ' O'))
+
+
+// métodos string: split
+// ele divide a string em arrays
+// no split devo colocar o elemento separador, por exmplo ele vai usar o espaço, algum caracter como base de seperamento
+const inteiro = "banana";
+console.log(inteiro);
+
+const arrayzado = inteiro.split("");
+console.log(arrayzado);
+
+arrayzado.forEach((tudo) => {
+  console.log(tudo);
+});
+console.log(inteiro);
+
+const frase = "agua mole pedra dura tanto bate que até fura";
+console.log(frase)
+
+const palavras = frase.split(' ')
+console.log(palavras)
+
+const cpf = '000.000.000-42'
+console.log(cpf)
+
+const cpfLimpo = cpf.split(/[.-]/) // regex para adicionar mais um parametro de separação
+console.log(cpfLimpo)
+
+// métodos string: join
+const juntaArrays = palavras.join(' ')
+console.log(juntaArrays)
+
+const menu = ['hamburgue', 'x-tudo', 'x-salada', 'cachorro quente']
+const pedido = `quero comer: ${menu.join(', ')}`
+console.log(pedido)
+
+// método string: repeat
+const alert = 'ele está próximo '
+console.log(alert.repeat(4))
+
+*/
