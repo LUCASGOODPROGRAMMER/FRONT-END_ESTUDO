@@ -260,4 +260,86 @@ console.log(pedido)
 const alert = 'ele está próximo '
 console.log(alert.repeat(4))
 
+
+
+// Rest Operator/Rest Parameters
+// Rest Operator é caracterizado pelo simbolo ... seguido de args que significa argumentos indefinidos
+
+const infinitosParametros = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+
+  return total;
+};
+
+console.log(infinitosParametros(5, 5, 5, 5, 5, 5));
+
+// for of
+
+const sum = (...argumentos) => {
+  let total = 0;
+  for (num of argumentos) {
+    total += num;
+  }
+  return total
+};
+console.log(sum(2, 2, 6))
+
+// Destructuring em objetos
+// usado para desestruturar dados
+
+const userDetails = {
+    nome: 'lucas',
+    senha: 'abcdfg1234',
+    id: 5
+}
+
+// const nome = userDetails.nome
+const {nome, senha, id} = userDetails
+
+console.log(`nome: ${nome}\nsenha: ${senha}\nidentificador: ${id}`)
+
+// renomeando variáveis
+const {id: identificador} = userDetails
+console.log(`nome: ${nome}\nsenha: ${senha}\nidentificador: ${identificador}`)
+
+// Destructuring em arrays
+const list = ['moto', 'navio', 'carro', 'caminhão', 'barco', 'bote']
+
+const [veiculo1, veiculo2, veiculo3, veiculo4, veiculo5] = list //vou nomear as variaveis na mesma orden dps arrays list
+
+console.log(veiculo1)
+console.log(veiculo5)
+
+
+
+// JSON
+const myJson = '{"name": "lucas", "idade": 17, "sexo": "masculino", "certificados": ["HTML", "CSS", "JAVA SCRIPT"]}' // estrutura de um JSON
+
+const escolaJson = '{"nome": "IFRO", "endereco": "RO", "idade": 115}'
+
+// JSON para objeto e objeto para JSON
+// JSON.parse converte para objeto
+// JSON.stringify converte para JSON
+const objeto = JSON.parse(escolaJson)
+console.log(objeto)
+
+//JSON inválido
+// const invalid = '{"nome": lucas}'
+// console.log(invalid)
+
+// const invalidObject = JSON.parse(invalid)
+// console.log(invalidObject)
+
+const objetoNormal = {nome: 'lucas', age: 17, ano: 2008, nacionalidade: 'brasileira'}
+console.log(objetoNormal)
+
+objetoConvertido = JSON.stringify(objetoNormal)
+console.log(objetoConvertido) // para JSON
+
+objetoReconvertido = JSON.parse(objetoConvertido)
+console.log(objetoReconvertido) // para Object Literals JS
+
 */
