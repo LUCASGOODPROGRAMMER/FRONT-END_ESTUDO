@@ -1,0 +1,2 @@
+RENDERIZAÇÃO CONDICIONAL:
+- uma parte do template é exibida por uma condição

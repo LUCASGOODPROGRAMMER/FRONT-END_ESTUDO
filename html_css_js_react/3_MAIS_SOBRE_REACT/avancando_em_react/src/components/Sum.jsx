@@ -6,6 +6,7 @@ const Sum = () => {
   function randomNumber() {
     return Math.ceil(Math.random() * 10);
   }
+
   return (
     <>
       <p>teste sua sorte:</p>
@@ -23,6 +24,7 @@ const Sum = () => {
       <p>
         {number} {otherNumber}
       </p>
+      {number === otherNumber ?<p>sortudo</p>:<p>os números não são iguais</p>}
     </>
   );
 };

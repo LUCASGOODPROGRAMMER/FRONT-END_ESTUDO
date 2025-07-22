@@ -9,6 +9,7 @@ import Data from './components/Data'
 import Sum from './components/Sum'
 import ListRender from './components/ListRender'
 import Home from './components/Home'
+import ConditionalRender from './components/ConditionalRender'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <ListRender/>
       {/**testando */}
       <Home/>
+      <ConditionalRender/>
     </>
   )
 }

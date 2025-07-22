@@ -11,6 +11,8 @@ const Data = () => {
 
             <p>Valor: {randomNumber}</p>
             <button onClick={() => setRandomNumber(Math.ceil(Math.random() * 100))}>SORTEAR</button>
+
+            
         </>
     )
 }
