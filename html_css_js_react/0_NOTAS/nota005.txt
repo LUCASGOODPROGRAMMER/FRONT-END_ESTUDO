@@ -4,3 +4,7 @@ HOOKS:
 - o hook precisa ser importado e começa com a palavra use
 - mais utilizado useState e useEffect
 - hooks criado por mim se chama custom hooks
+
+HOOK: useState
+- useState um dos hooks mais utilizados para gerenciar o estado de um ou mais dados, useState é usado pois variáveis não guncionam como o esperado, elas não re-renderizam o componente
+- para guardar um dado é utilizado setNomeDoDado
