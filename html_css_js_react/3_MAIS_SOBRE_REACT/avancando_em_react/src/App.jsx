@@ -10,6 +10,7 @@ import Sum from './components/Sum'
 import ListRender from './components/ListRender'
 import Home from './components/Home'
 import ConditionalRender from './components/ConditionalRender'
+import ShowUserName from './components/ShowUserName'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       {/**testando */}
       <Home/>
       <ConditionalRender/>
+      <ShowUserName name="lucas" estadoCivil="solteiro" pessoa="clt"/>
     </>
   )
 }

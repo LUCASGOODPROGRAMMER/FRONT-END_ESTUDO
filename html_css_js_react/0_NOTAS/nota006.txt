@@ -1,2 +1,8 @@
 RENDERIZAÇÃO CONDICIONAL:
 - uma parte do template é exibida por uma condição
+
+PROPS
+- um recurso fundamental do react que nos ajuda a trabalhar com componentes
+- permite a passagem de dados do componente pai para o filho
+- util quando os dados vem de um banco de dados
+- os componentes geralmente tem mais de uma props, é possíves desestruturar no parâmetro da função
