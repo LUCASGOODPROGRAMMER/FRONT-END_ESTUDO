@@ -11,6 +11,7 @@ import ListRender from './components/ListRender'
 import Home from './components/Home'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
+import HotelDetails from './components/HotelDetails'
 
 function App() {
 
@@ -27,6 +28,10 @@ function App() {
       <Home/>
       <ConditionalRender/>
       <ShowUserName name="lucas" estadoCivil="solteiro" pessoa="clt"/>
+      <HotelDetails nome="crackolândia" endereco="rua22" tamanho={200} dono="lucas"/>
+      <HotelDetails nome="PortHub" endereco="nuvem" tamanho={10000} dono="?"/>
+      <HotelDetails nome="github" endereco="rua 27" tamanho={101111} dono="keynner"/>
+
     </>
   )
 }
