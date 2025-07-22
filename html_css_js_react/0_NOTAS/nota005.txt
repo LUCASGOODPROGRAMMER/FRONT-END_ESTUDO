@@ -1,0 +1,6 @@
+HOOKS:
+- hooks é uma importante estrutura do react que tem diversas funções
+- usado para guardar e alterar o estado de algum dado
+- o hook precisa ser importado e começa com a palavra use
+- mais utilizado useState e useEffect
+- hooks criado por mim se chama custom hooks
