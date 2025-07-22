@@ -15,6 +15,7 @@ import HotelDetails from './components/HotelDetails'
 import Fragment from './components/Fragment'
 import Container from './components/Container'
 import { Children } from 'react'
+import ExecuteFunction from './components/ExecuteFunction'
 
 // renderização de listas com componentes
 const hotels = [
@@ -24,6 +25,9 @@ const hotels = [
 ]
 
 function App() {
+  function showMessage() {
+    console.log("click")
+  }
 
   return (
     <>
@@ -65,6 +69,8 @@ function App() {
           <p>Meu Container</p>
         </div>
       </Container>
+      {/**função em prop */}
+      <ExecuteFunction myFunction={showMessage}/>
     </>
   )
 }

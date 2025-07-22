@@ -6,6 +6,8 @@ PROPS
 - permite a passagem de dados do componente pai para o filho
 - util quando os dados vem de um banco de dados
 - os componentes geralmente tem mais de uma props, é possíves desestruturar no parâmetro da função
+- podemos passar funções através de props. Criando a função no componente pai e enviando como prop
+- no componente filho podemos utilizar para algum evento
 
 REACT FRAGMENT
 - permiti ter vários elementos pais dentro do componente
