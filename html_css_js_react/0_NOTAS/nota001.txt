@@ -1,0 +1,17 @@
+- React é uma biblioteca Java Script para o desenvolvimento de aplicações front-end
+
+- A categoria dela é SPA (Single Page Application) ou seja ela não recarrega sempre que ocorre uma alteração, o conteúdo muda tudo dentro da mesma página
+
+- A sua arquitetura é baseada em componentes (pequenos blocos reutilizaveis que representam partes da interface)
+
+- Precisa-se de node.js para iniciar uma aplicação React. O node é um ambiente necessário para rodar essas ferramentas
+
+- É usado o gerenciador de pacotes npm para iniciar projetos ou yarn
+
+- Para criar uma aplicação é utilizado a ferramenta Vite. Vite é muito mais rápido comparado aos métodos antigos
+
+- No terminal: npm create vite@latest
+
+- cd nome-do-projeto 
+- npm install (usado para instalar dependências)
+- npm run dev (Rodar script)

@@ -1,0 +1,4 @@
+Hierarquia de componentes:
+- Os componentes podem ser reutilizados em outros componentes
+- Tambèm é possível construir uma hierarquia, onde um componente é pai do outro
+- Ao importar o componente pai todos os outros vem junto

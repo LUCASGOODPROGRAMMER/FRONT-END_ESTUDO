@@ -137,11 +137,11 @@ greeting("lucas");
 greeting();
 
 // valor default
-const customGreeting = (name, greet = "Olá caçador, seja bem vindo") => {
-  return `${greet} ${name}!`;
+const customGreeting = (name, greet = ": Olá caçador, seja bem vindo") => {
+  return `${name} ${greet}!`;
 };
 
-console.log(customGreeting("Lc"));
+console.log(customGreeting("Lucas"));
 console.log(customGreeting("Lucas", "boa noite e até a próxima"));
 
 const repeatText = (text = "pq você me ignora?", repeat = 2) => {

@@ -1,0 +1,10 @@
+Estrutura base do React:
+- node_modules: dependências do projeto (pacotes instalados pelo npm)
+
+- public: assets e arquivos estáticos (Arquivos públicos, imagens...)
+
+- src: onde escrevemos o código da aplicação (onde é escrito o código da aplicação)
+
+- src/index.js: arquivo de inicialização da aplicação (inicializador da aplicação)
+
+- src/App.js: componente principal (primeira interface)

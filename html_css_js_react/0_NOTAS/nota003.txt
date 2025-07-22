@@ -1,0 +1,45 @@
+| JSX é...               | Significa...                             |
+| ---------------------- | ---------------------------------------- |
+| Uma sintaxe do React   | Que mistura HTML com JavaScript          |
+| Mais fácil de escrever | Do que `React.createElement()`           |
+| Processado por Babel   | E transformado em código JavaScript puro |
+
+| Pasta/Arquivo   | Função                                                                 |
+| --------------- | ---------------------------------------------------------------------- |
+| `node_modules/` | Onde ficam todas as dependências (bibliotecas instaladas com npm/yarn) |
+| `public/`       | Arquivos estáticos (ex: imagens, `index.html`)                         |
+| `src/`          | Onde escrevemos o código da aplicação React                            |
+| `src/index.js`  | Arquivo que **inicializa** o React e renderiza o App                   |
+| `src/App.js`    | **Componente principal** da aplicação                                  |
+
+| Conceito             | Explicação                                                 |
+| -------------------- | ---------------------------------------------------------- |
+| JSX                  | Sintaxe que permite **escrever HTML dentro do JavaScript** |
+| Exemplo JSX          | `<h1>Olá, Lucas!</h1>`                                     |
+| Exemplo sem JSX      | `React.createElement('h1', null, 'Olá, Lucas!')`           |
+| Expressões JS no JSX | Usar `{}` dentro do HTML: `<p>{nome}</p>`                  |
+| Tag pai obrigatória  | JSX precisa de **um único elemento pai**                   |
+| Fragmento            | Use `<>...</>` quando não quiser adicionar uma `<div>`     |
+| className            | No JSX, usamos `className="..."` em vez de `class`         |
+| Fechamento de tags   | Todas as tags devem ser **fechadas**: `<img src="" />`     |
+
+| Hook          | Para que serve                                                         |
+| ------------- | ---------------------------------------------------------------------- |
+| `useState()`  | Guardar e atualizar **valores dinâmicos** (ex: contadores, inputs etc) |
+| `useEffect()` | Executar **efeitos colaterais** (ex: buscar dados, temporizadores etc) |
+
+| Comando                                | Função                                           |
+| -------------------------------------- | ------------------------------------------------ |
+| `npm install`                          | Instala pacotes (gerenciador padrão do Node.js)  |
+| `yarn`                                 | Alternativa ao npm (mais rápido em alguns casos) |
+| `npm start`                            | Inicia o servidor de desenvolvimento local       |
+| `npx create-react-app nome-do-projeto` | Cria um novo projeto React                       |
+
+| Conceito       | Explicação                                             |
+| -------------- | ------------------------------------------------------ |
+| Componente     | Função que retorna JSX                                 |
+| Props          | Parâmetros passados para um componente                 |
+| Estado (state) | Dados que mudam com o tempo (usado com `useState`)     |
+| Renderização   | O React **atualiza a tela** sempre que o estado muda   |
+| Virtual DOM    | React cria uma cópia do DOM e atualiza só o necessário |
+| React é SPA    | Single Page Application: **sem recarregar a página**   |
