@@ -9,3 +9,9 @@ PROPS
 
 REACT FRAGMENT
 - permiti ter vários elementos pais dentro do componente
+
+CHILDREN PROP:
+- é utilizado quando um componente precisa ter JSX dentro dele
+- o JSX vem do componente pai
+- o commponente age como um container abrigando o JSX
+- children entra como uma prop do componente

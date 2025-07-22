@@ -13,6 +13,8 @@ import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import HotelDetails from './components/HotelDetails'
 import Fragment from './components/Fragment'
+import Container from './components/Container'
+import { Children } from 'react'
 
 // renderização de listas com componentes
 const hotels = [
@@ -52,6 +54,17 @@ function App() {
       ))}
 
       <Fragment/>
+
+      {/**children */}
+      <Container>
+        <p>alguma coisa</p>
+      </Container>
+      <Container>
+        <div>
+          <h2>testando</h2>
+          <p>Meu Container</p>
+        </div>
+      </Container>
     </>
   )
 }
