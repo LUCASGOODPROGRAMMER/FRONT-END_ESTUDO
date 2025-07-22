@@ -12,6 +12,7 @@ import Home from './components/Home'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import HotelDetails from './components/HotelDetails'
+import Fragment from './components/Fragment'
 
 // renderização de listas com componentes
 const hotels = [
@@ -50,6 +51,7 @@ function App() {
         <HotelDetails key={hotel.id} nome={hotel.nome} endereco={hotel.color} tamanho={hotel.advertencias}/>
       ))}
 
+      <Fragment/>
     </>
   )
 }

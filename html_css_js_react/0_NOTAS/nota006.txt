@@ -6,3 +6,6 @@ PROPS
 - permite a passagem de dados do componente pai para o filho
 - util quando os dados vem de um banco de dados
 - os componentes geralmente tem mais de uma props, é possíves desestruturar no parâmetro da função
+
+REACT FRAGMENT
+- permiti ter vários elementos pais dentro do componente
