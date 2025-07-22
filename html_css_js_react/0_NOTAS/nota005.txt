@@ -14,3 +14,9 @@ KEY:
 - o React precisa de uma chave única para cada elemento
 - As key servem para ajudar a renderização do componente
 - é utilizado na manipulação dos itens
+
+PREVIOUS STATE:
+- um recurso do hook useState
+- com ele é possível pegar o valor original dos dados e fazer alguma alteração
+- utilizado geralmente em listas
+- o primeiro argumento do set smepre é o previous state
