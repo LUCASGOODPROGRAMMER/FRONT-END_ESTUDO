@@ -7,6 +7,7 @@ import dog from './assets/dog.jpg'
 // import { useState } from 'react'
 import Data from './components/Data'
 import Sum from './components/Sum'
+import ListRender from './components/ListRender'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <img src={dog} alt="dog" /> {/**template expression para acessar a imagem importada */}
       <Data/>
       <Sum/>
+      <ListRender/>
     </>
   )
 }
