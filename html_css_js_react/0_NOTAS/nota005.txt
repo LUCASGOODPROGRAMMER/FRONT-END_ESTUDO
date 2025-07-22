@@ -8,3 +8,9 @@ HOOKS:
 HOOK: useState
 - useState um dos hooks mais utilizados para gerenciar o estado de um ou mais dados, useState é usado pois variáveis não guncionam como o esperado, elas não re-renderizam o componente
 - para guardar um dado é utilizado setNomeDoDado
+
+KEY:
+- iterar uma lista sem a propriedade key gera erro no console
+- o React precisa de uma chave única para cada elemento
+- As key servem para ajudar a renderização do componente
+- é utilizado na manipulação dos itens
