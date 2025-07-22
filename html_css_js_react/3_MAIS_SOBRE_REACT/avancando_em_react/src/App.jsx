@@ -8,6 +8,7 @@ import dog from './assets/dog.jpg'
 import Data from './components/Data'
 import Sum from './components/Sum'
 import ListRender from './components/ListRender'
+import Home from './components/Home'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
       <Data/>
       <Sum/>
       <ListRender/>
+      {/**testando */}
+      <Home/>
     </>
   )
 }
