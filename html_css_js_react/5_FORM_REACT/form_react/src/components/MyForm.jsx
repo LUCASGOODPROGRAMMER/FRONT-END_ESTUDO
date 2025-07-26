@@ -2,38 +2,38 @@ import "./MyForm.module.css";
 
 import { useState } from "react";
 
-const MyForm = ({userName, userEmail,userPassword}) => {
+const MyForm = ({ userName, userEmail, userPassword }) => {
   // gerenciamento de dados
   const [name, setName] = useState(userName);
   const [email, setEmail] = useState(userEmail);
   const [password, setPassword] = useState(userPassword);
+  const [bio, setBio] = useState("");
 
   const handleName = (e) => {
-    setName(e.target.value)
+    setName(e.target.value);
   };
 
   const handleEmail = (e) => setEmail(e.target.value);
 
-  console.log(name, email, password);
-
   // envio de form
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(name, email, password)
+    e.preventDefault();
+    console.log(name, email, password, bio);
 
     // validação
     // envio
 
     // limpar form
-    setName("")
-    setEmail("")
-    setPassword("")
-  }
+    setName("");
+    setEmail("");
+    setPassword("");
+    setBio("")
+  };
 
   return (
     <>
-    {/** criando form */}
-    {/** envio de formulário */}
+      {/** criando form */}
+      {/** envio de formulário */}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
@@ -43,7 +43,7 @@ const MyForm = ({userName, userEmail,userPassword}) => {
             placeholder="Qual seu nome?"
             onChange={handleName}
             // controlled input
-            value = {name || "" }
+            value={name || ""}
           />
         </div>
         {/** label envolvendo input */}
@@ -54,7 +54,7 @@ const MyForm = ({userName, userEmail,userPassword}) => {
             name="email"
             placeholder="Qual o seu E-mail"
             onChange={handleEmail}
-            value = {email}
+            value={email}
           />
         </label>
         <div>
@@ -64,9 +64,18 @@ const MyForm = ({userName, userEmail,userPassword}) => {
             name="password"
             placeholder="Qual sua senha?"
             onChange={(e) => setPassword(e.target.value)}
-            value = {password || ""}
+            value={password || ""}
           />
         </div>
+        <label>
+          <span>Bio:</span>
+          <textarea
+            name="bio"
+            placeholder="Descrição da Bio"
+            onChange={(e) => setBio(e.target.value)}
+            value={bio}
+          ></textarea>
+        </label>
         <input type="submit" value="Enviar" />
       </form>
     </>
