@@ -23,6 +23,11 @@ const MyForm = ({userName, userEmail,userPassword}) => {
 
     // validação
     // envio
+
+    // limpar form
+    setName("")
+    setEmail("")
+    setPassword("")
   }
 
   return (
