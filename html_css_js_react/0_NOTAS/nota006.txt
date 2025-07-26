@@ -17,3 +17,7 @@ CHILDREN PROP:
 - o JSX vem do componente pai
 - o commponente age como um container abrigando o JSX
 - children entra como uma prop do componente
+
+STATE LIFT:
+- elevação de state, quando um valor do componente filho tem de ser levado ao pai
+- o componente pai gerencia os valores e passa para os filhos as alterações

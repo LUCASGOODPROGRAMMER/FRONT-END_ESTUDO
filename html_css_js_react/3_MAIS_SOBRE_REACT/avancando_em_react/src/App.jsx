@@ -16,7 +16,9 @@ import Fragment from './components/Fragment'
 import Container from './components/Container'
 import { Children } from 'react'
 import ExecuteFunction from './components/ExecuteFunction'
-
+import { useState } from 'react'
+import Message from './components/Message'
+import ChangeMessage from './components/ChangeMessage'
 // renderização de listas com componentes
 const hotels = [
   {id: 1, nome: "check mate", color:"cinza", advertencias: 2},
@@ -27,6 +29,12 @@ const hotels = [
 function App() {
   function showMessage() {
     console.log("click")
+  }
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
   }
 
   return (
@@ -71,6 +79,9 @@ function App() {
       </Container>
       {/**função em prop */}
       <ExecuteFunction myFunction={showMessage}/>
+      {/**state lift */}
+      <Message msg={message}/>
+      <ChangeMessage handleMessage={handleMessage}/>
     </>
   )
 }
