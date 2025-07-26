@@ -15,8 +15,10 @@ function App() {
 
         {/** css de component */}
         <MyComponent/>
-
         <p>parágrafo afetado pelo css do componente</p>
+
+        {/** inline style (prática inadequada para manutenção e legibilidade do código)*/}
+        <p style={{color: "purple", fontWeight:"bold", backgroundColor:"black", borderRadius:"20px", placeSelf:"center", padding:"10px", margin:"10px"}}>Este elemento tem estilos inline</p>
       </div>
     </>
   )
