@@ -2,11 +2,11 @@ import "./MyForm.module.css";
 
 import { useState } from "react";
 
-const MyForm = () => {
+const MyForm = ({userName, userEmail,userPassword}) => {
   // gerenciamento de dados
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [name, setName] = useState(userName);
+  const [email, setEmail] = useState(userEmail);
+  const [password, setPassword] = useState(userPassword);
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -16,10 +16,20 @@ const MyForm = () => {
 
   console.log(name, email, password);
 
+  // envio de form
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(name, email, password)
+
+    // validação
+    // envio
+  }
+
   return (
     <>
     {/** criando form */}
-      <form>
+    {/** envio de formulário */}
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
           <input
@@ -27,16 +37,19 @@ const MyForm = () => {
             name="name"
             placeholder="Qual seu nome?"
             onChange={handleName}
+            // controlled input
+            value = {name || "" }
           />
         </div>
         {/** label envolvendo input */}
         <label>
           <span>E-mail:</span>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Qual o seu E-mail"
             onChange={handleEmail}
+            value = {email}
           />
         </label>
         <div>
@@ -46,6 +59,7 @@ const MyForm = () => {
             name="password"
             placeholder="Qual sua senha?"
             onChange={(e) => setPassword(e.target.value)}
+            value = {password || ""}
           />
         </div>
         <input type="submit" value="Enviar" />
