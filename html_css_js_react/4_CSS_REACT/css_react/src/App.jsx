@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
+/** css de component */
+import MyComponent from './components/MyComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,11 @@ function App() {
       <div>
         {/** css global */}
         <h1>css no react</h1>
+
+        {/** css de component */}
+        <MyComponent/>
+
+        <p>parágrafo afetado pelo css do componente</p>
       </div>
     </>
   )
