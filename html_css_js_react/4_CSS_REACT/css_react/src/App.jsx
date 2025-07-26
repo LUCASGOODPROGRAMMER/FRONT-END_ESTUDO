@@ -4,6 +4,9 @@ import "./App.css";
 /** css de component */
 import MyComponent from "./components/MyComponent";
 
+/** css modules */
+import Title from "./components/Title";
+
 function App() {
   // css inline dinâmico
   const n = Math.round(Math.random() * 2);
@@ -55,7 +58,11 @@ function App() {
         </h2>
 
         {/** classes dinâmicas */}
-        <h2 className={redTitle ? "red-title" : null}>Este título pode der uma classe dinâmica</h2>
+        <h2 className={redTitle ? "red-title" : null}>Este título pode ser uma classe dinâmica</h2>
+      
+        {/** css modules */}
+        <Title/>
+        <p className="title">parágrafo não afetado pelo css modules</p>
       </div>
     </>
   );
