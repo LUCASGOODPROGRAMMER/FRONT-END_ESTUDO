@@ -11,7 +11,7 @@ function App() {
    * Math.floor(4.7)     // 4 - Arredonda para baixo
    * Math.ceil(4.1)      // 5 - Arredonda para cima
    * Math.round(4.5)     // 5 - Arredonda para o inteiro mais próximo
-   * Math.trunc(4.9)     // 4 - Remove a parte decimal 
+   * Math.trunc(4.9)     // 4 - Remove a parte decimal
    * Math.min(5, 1, 9)   // 1 - Menor número
    * Math.max(5, 1, 9)   // 9 - Maior número
    * Math.pow(2, 3)      // 8 - 2 elevado a 3
@@ -19,6 +19,10 @@ function App() {
    * Math.abs(-7)        // 7 - Retorna o valor positivo
    * Math.random();  // ex: 0.43824234
    * */
+
+  // classes dinâmicas
+  // const redTitle = Boolean(Math.round(Math.random() * 1));
+  const redTitle = !!Math.round(Math.random()); // a dupla negação serve para converter para Boolean
 
   return (
     <>
@@ -49,6 +53,9 @@ function App() {
         <h2 style={n > 1 ? { color: "magenta" } : { color: "purple" }}>
           CSS dinâmico
         </h2>
+
+        {/** classes dinâmicas */}
+        <h2 className={redTitle ? "red-title" : null}>Este título pode der uma classe dinâmica</h2>
       </div>
     </>
   );

@@ -8,3 +8,11 @@
 h1{
   font-size: 4rem;
 }
+
+/* classe dinâmica */
+.red-title {
+  transition: 2s ease-in-out;
+  font-size: 50px;
+  color: red;
+  background-color: black;
+}
