@@ -13,17 +13,24 @@ import ErrorPage from "./routes/ErrorPage.jsx";
 // 3 - componente base
 import Home from "./routes/Home.jsx";
 
+// 7 - rota dinâmica
+import Product from "./routes/Product.jsx";
+
 // uma função que cria um roteador basea em histórico do navegador
 // entre o array e objeto estou definindo as rotas  da aplicação
 const router = createBrowserRouter([
-  { path: "/", element: <App />, errorElement: <ErrorPage />,
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
     // 3 - componente base
-    children : [
-      {path:"/",
-      element: <Home/>,},
-      {path: "contact", element: <Contact/>}
-    ]
-   },
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "contact", element: <Contact /> },
+      // 7 - rota dinâmica
+      { path: "products/:id", element: <Product /> },
+    ],
+  },
   /**{ path: "contact", element: <Contact />, errorElement: <ErrorPage/> }, */
 ]);
 

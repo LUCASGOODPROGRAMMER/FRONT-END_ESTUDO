@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "banana",
+      "price": "200"
+    },
+    {
+      "id": 2,
+      "name": "buceta",
+      "price": "12"
+    },
+    {
+      "id": 3,
+      "name": "shampoo",
+      "price": "45"
+    },
+    {
+      "id": 4,
+      "name": "sabonete",
+      "price": "12"
+    },
+    {
+      "id": 5,
+      "name": "detergente",
+      "price": "14"
+    },
+    {
+      "id": 6,
+      "name": "escova",
+      "price": "37.90"
+    }
+  ]
+}
