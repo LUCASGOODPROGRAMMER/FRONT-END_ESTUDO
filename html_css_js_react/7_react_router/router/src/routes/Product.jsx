@@ -1,6 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 
-import { useParams } from "react-router-dom"; // usado para poder extrair o id da url
+import { useParams, Link } from "react-router-dom"; // usado para poder extrair o id da url
 
 const Product = () => {
   const { id } = useParams();
@@ -14,6 +14,8 @@ const Product = () => {
       <div>
         <h1>{product.name}</h1>
         <p>{product.price}</p>
+        {/** 8 - nested route */}
+        <Link to={`/products/${id}/info`}>Mais Informações</Link>
       </div>
     </div>
   );

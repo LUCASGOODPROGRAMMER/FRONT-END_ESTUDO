@@ -16,6 +16,9 @@ import Home from "./routes/Home.jsx";
 // 7 - rota dinâmica
 import Product from "./routes/Product.jsx";
 
+// 8 nested route
+import Info from "./routes/Info.jsx";
+
 // uma função que cria um roteador basea em histórico do navegador
 // entre o array e objeto estou definindo as rotas  da aplicação
 const router = createBrowserRouter([
@@ -29,6 +32,8 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       // 7 - rota dinâmica
       { path: "products/:id", element: <Product /> },
+      // 8 - nested route
+      {path: "products/:id/info", element: <Info/>}
     ],
   },
   /**{ path: "contact", element: <Contact />, errorElement: <ErrorPage/> }, */
