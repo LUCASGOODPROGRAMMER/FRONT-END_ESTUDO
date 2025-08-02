@@ -10,11 +10,21 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 // 2 - página de erro
 import ErrorPage from "./routes/ErrorPage.jsx";
 
+// 3 - componente base
+import Home from "./routes/Home.jsx";
+
 // uma função que cria um roteador basea em histórico do navegador
 // entre o array e objeto estou definindo as rotas  da aplicação
 const router = createBrowserRouter([
-  { path: "/", element: <App />, errorElement: <ErrorPage/> },
-  { path: "contact", element: <Contact />, errorElement: <ErrorPage/> },
+  { path: "/", element: <App />, errorElement: <ErrorPage />,
+    // 3 - componente base
+    children : [
+      {path:"/",
+      element: <Home/>,},
+      {path: "contact", element: <Contact/>}
+    ]
+   },
+  /**{ path: "contact", element: <Contact />, errorElement: <ErrorPage/> }, */
 ]);
 
 createRoot(document.getElementById("root")).render(
