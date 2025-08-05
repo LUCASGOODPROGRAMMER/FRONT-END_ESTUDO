@@ -1,0 +1,100 @@
+- import { Link } from 'react-router-dom'
+o <Link /> é usado para navegar entre páginas (rotas) sem recarregar a página. Ele veio para substituir o <a href="...">, que sempre causa um recarregamento de página
+
+exemplo
+
+
+< Link to="/produtos">Ver produtos em estoque</Link>
+
+- import { NavLink } from 'react-router-dom'
+NavLink é quase igual o Link só que o diferencial dele é que permite adicionar estilos automaticamente enquanto está ativo
+
+exemplo:
+
+<NavLink
+to="/produtos"
+className={({isActive}) => isActive ? "ativo" : ""}
+>
+Produtos do cattálogo
+</NavLink>
+
+exemplo
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Contato from './pages/Contato';
+import NavBar from './components/NavBar';
+
+function App() {
+  return (
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/contato" element={<Contato />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+explicação:
+
+BrowserRouter ou Router: Componente que envolve toda a aplicação e permite usar o roteador com URLs reais (sem hash).
+
+Routes: é um container para todas as rotas da aplicação
+
+Route: é onde eu difino o caminho (path) e o componente que será exibido (elenment)
+
+exemplo de rotas e sub rotas:
+
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import App from "./App.jsx";
+import Login from "./Login.jsx";
+import Home from "./routes/Home.jsx";
+import Sobre from "./routes/Sobre.jsx";
+import Dashboard from "./routes/Dashboard.jsx";
+import DashboardHome from "./routes/DashboardHome.jsx";
+import DashboardSettings from "./routes/DashboardSettings.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />, // layout principal com NavBar
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "sobre", element: <Sobre /> },
+
+      {
+        path: "dashboard",
+        element: <Dashboard />, // outro layout com menu lateral
+        children: [
+          { path: "home", element: <DashboardHome /> },
+          { path: "settings", element: <DashboardSettings /> },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />, // página isolada, sem NavBar
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
+);
+
+
+
+
+
+

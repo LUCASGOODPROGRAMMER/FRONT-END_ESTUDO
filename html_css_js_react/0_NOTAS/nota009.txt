@@ -1,0 +1,2 @@
+- Props (properties) 
+são valores que são passado de um componente pai para o filho. São parecidas com parâmetros de uma função, só que para componentes em reatc. Ele é muito usado para  tornar componentes reutilizáveis e dinâmicos, podendo passar diferentes dados dependendo situação

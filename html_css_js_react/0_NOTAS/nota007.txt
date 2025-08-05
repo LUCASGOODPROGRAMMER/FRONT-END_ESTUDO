@@ -1,0 +1,64 @@
+npm install react-router-dom
+npm install json-server
+
+- { useNavigate } from 'react-router-dom'
+usado quando eu preciso rediricionar um usuário sem que necessariamente ele tenha clicado em um link, através de ações como login, prenchimento de um formulãrio, click em um botão,
+
+exemplo de rotas:
+
+import { routes, route } from 'react-router-dom'
+import Inicio
+import Produtos
+
+function App () {
+    return(
+        <Routes>
+            <route path: "/", element = { < Inicio /> }>
+            <route path: "/produtos" element = { < Produtos /> }>
+        <Routes>
+    )
+}
+
+// pages/Inicio.jsx
+import { useNavigate } from 'react-router-dom'
+
+function Inicio(){
+    const navigate = useNavigate()
+
+    const navigateParaProdutos = () => {
+        navigate('/produtos') // redireciona para a página /produtos
+    }
+    return(
+        <h1>seja bem vindo<h1>
+        <p>clique no botão para efetuar o login<p>
+        <button onClick={navigateParaProdutos}>login<button>
+    )
+}
+
+export default Inicio;
+
+
+// navegação com parâmetros
+navigate('/produto/123'); redireciona para rota dinâmica com id
+
+navigate(-1) // retorna para a página anterior
+navigate(1) // avança para a próxima pagina 
+
+exemplo de login
+
+import { useNavigate}
+
+function Login() {
+    const navigate = useNavigate()
+
+    const handleLogin = () => {
+        const login = 'efetuado'
+
+        if(login === 'efetuado') navigate('/Inicio')
+
+    }
+    return(
+        <h1>CLIQUE ABAIXO PARA ENVIAR OS DADOS<h1>
+        <button onClick={handleLogin}>logar<button>
+    )
+}
