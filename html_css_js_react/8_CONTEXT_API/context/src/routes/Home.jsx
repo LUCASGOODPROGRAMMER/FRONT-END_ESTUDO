@@ -13,15 +13,21 @@ import Buttons from '../components/Buttons'
 
 const Home = () => {
   // const {counter} = useContext(CounterContext)
-  const {counter} = useCounterContext()
+  const { counter } = useCounterContext()
 
-  const {color} = useTitleColorContext()
+  const { color, dispatch} = useTitleColorContext()
+
+  const setTitleColor = (color) => { dispatch({ type: color }) }
 
   return (
     <main>
-      <h1 style={{color:color}}>Home</h1>
-      <Buttons/>
+      <h1 style={{ color: color }}>Home</h1>
+      <Buttons />
       <p>Valor do contador = {counter}</p>
+      <div>
+        <button onClick={() => setTitleColor("RED")}>Vermelho</button>
+        <button onClick={() => setTitleColor("BLUE")}>Azul</button>
+      </div>
     </main>
   )
 }
