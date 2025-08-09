@@ -1,4 +1,5 @@
 import HookUseState from '../components/HookUseState'
+import HookUseReducer from '../components/HookUseReducer'
 
 const Home = () => {
   // const {counter} = useContext(CounterContext)
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <h1>home</h1>
       <HookUseState />
+      <HookUseReducer />
     </>
 
   )
