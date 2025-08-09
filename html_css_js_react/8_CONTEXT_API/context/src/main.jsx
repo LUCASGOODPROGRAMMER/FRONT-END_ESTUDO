@@ -17,26 +17,31 @@ import App from './App.jsx'
 // 2 - criando provider
 import { CounterContextProvider } from './context/CounterContext.jsx';
 
+// 5 - context mais complexo
+import { TitleColorContextProvider } from './context/TitleColorContext.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage/>,
+    element: <App />,
+    errorElement: <ErrorPage />,
     children: [
-      {index: "home", element: <Home/>},
-      {path: "contact", element: <Contact/>}
+      { index: "home", element: <Home /> },
+      { path: "contact", element: <Contact /> }
     ]
   }
 ],
-{
-  basename: "/context/"
-})
+  {
+    basename: "/context/"
+  })
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CounterContextProvider>
-      <RouterProvider router={router}/>
+      <TitleColorContextProvider>
+        <RouterProvider router={router} />
+      </TitleColorContextProvider>
     </CounterContextProvider>
   </StrictMode>,
 )
