@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client'
 // 1 - configurando router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { HookUseContext } from './components/HookUseContext'
+
 // 3 - componente base
 import Home from "./routes/Home.jsx";
 
@@ -32,6 +34,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <HookUseContext>
+      <RouterProvider router={router}/>
+    </HookUseContext>
   </StrictMode>,
 )
