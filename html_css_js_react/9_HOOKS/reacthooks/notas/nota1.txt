@@ -289,3 +289,6 @@ parecido com o useEffect, esse hook roda antes da renderização do componente. 
 - useImperativeHandle
 é possível acionar ações em outros componentes de forma imperativa.
 Como não podemos passar ref por props, precisamos utilizar a função fowardRef. isso nos permite passar referências e tornar nosso exemplo viável
+
+- custom hooks
+hooks que nós criamos. Uma estratégia utilizada para abstrair funções complexas do componente ou reaproveitar o código que é muito utilizado em projetos profissionaiis
