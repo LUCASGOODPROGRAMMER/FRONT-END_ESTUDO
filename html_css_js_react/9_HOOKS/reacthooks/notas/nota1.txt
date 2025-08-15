@@ -285,3 +285,7 @@ Use useRef quando:
 
 - useLayoutEffect
 parecido com o useEffect, esse hook roda antes da renderização do componente. Um hook que é síncrono, bloqueando o carregamento da página para o sucesso da funcionalidade. feito para executar algo antes qualquer elememento aparecer na página
+
+- useImperativeHandle
+é possível acionar ações em outros componentes de forma imperativa.
+Como não podemos passar ref por props, precisamos utilizar a função fowardRef. isso nos permite passar referências e tornar nosso exemplo viável
