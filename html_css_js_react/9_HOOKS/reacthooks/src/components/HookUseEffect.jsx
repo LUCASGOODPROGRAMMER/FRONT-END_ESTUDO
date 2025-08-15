@@ -23,14 +23,14 @@ const HookUseEffect = () => {
     }, [message]) */
 
     // 4 - cleanup do useEffect
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            changeMessage()
-            console.log(`mensagem sendo monitorada pelo useEffect foi alterada para (${message}) pelo setTimeout`)
-        }, 2000)
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         changeMessage()
+    //         console.log(`mensagem sendo monitorada pelo useEffect foi alterada para (${message}) pelo setTimeout`)
+    //     }, 2000)
 
-        return () => clearTimeout(timer) //técnica clean up, sem isso esse useEffect pode ser duplicado ou continuar executando em outras páginas
-    }, [message])
+    //     return () => clearTimeout(timer) //técnica clean up, sem isso esse useEffect pode ser duplicado ou continuar executando em outras páginas
+    // }, [message])
 
     const changeMessage = () => {
         let newMessage = message;
