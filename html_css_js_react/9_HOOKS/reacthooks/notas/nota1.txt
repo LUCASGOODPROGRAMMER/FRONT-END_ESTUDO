@@ -282,3 +282,6 @@ Use useRef quando:
   // lógica que retorna um valor
   return resultado;
 }, [dependencias]);
+
+- useLayoutEffect
+parecido com o useEffect, esse hook roda antes da renderização do componente. Um hook que é síncrono, bloqueando o carregamento da página para o sucesso da funcionalidade. feito para executar algo antes qualquer elememento aparecer na página
